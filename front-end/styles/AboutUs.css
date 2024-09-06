@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Ubuntu;
+}  
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+header nav {
+    margin-right: 20px; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+header img {
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #000;
+    margin-top: 20px;
+}
+
+.about-us {
+    padding: 60px 20px; 
+}
+
+.about-us h1 {
+    text-align: center; 
+    font-size: 3em; 
+    margin-bottom: 20px; 
+}
+
+
+.about-us hr {
+    width: 200%; 
+    margin: 50px 20px auto;
+    margin-left: -20px; 
+    border: 1px solid #000;
+}
+
+
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.6; 
+    text-align: center; 
+    color: #333; 
+    margin-top: 50px;
+}

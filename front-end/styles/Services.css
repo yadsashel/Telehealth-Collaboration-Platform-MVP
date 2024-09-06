@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Ubuntu;
+}  
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+header nav {
+    margin-right: 20px; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+header img {
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+div h1 {
+    font-size: 2rem;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #000;
+    margin-top: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.services div {
+    border: 2px solid;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.service-link {
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.service-box {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #000;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
