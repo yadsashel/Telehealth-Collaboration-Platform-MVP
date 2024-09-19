@@ -8,21 +8,45 @@
     <title>Patient List</title>
 </head>
 <body>
-         
-         <!---- Creating the navbar and the icon ----->
+             
+    <!---- Creating the navbar and the icon ----->
      <header>
-        <a href="../pages/nurse-dash.html">
+        <a href="../pages/Appoint-Over.html">
         <img src="/assets/Icons/mainIcon.png" alt="Telehealth Logo">
         </a>      
         <nav>
             <ul>
-                <li><a href="../pages/Patient-Records.html">Patient Record</a></li>
-                <li><a href="../pages/Schedulding.html">Shceduling</a></li>
-                <li><a href="../pages/Notifications.html">Notifications</a></li>
-                <li><a href="../pages/Task-Management.html">Task Management</a></li>
+                <li><a href="../pages/Appoint-Over.html">Appointment Overview</a></li>
+                <li><a href="../pages/Patient-List.html">Patient List</a></li>
+                <li><a href="../pages/Consultations.html">Consultations</a></li>
+                <li><a href="../pages/Task-List.html">Task List</a></li>
             </ul>
         </nav>
-    </header>    
+    </header>
+     
+    <div class="doctor-patient-list-section">
+        <h2>Patient List</h2>
+        <table class="patient-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Diagnostic</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Date Added</th>
+                    <th>Time Added</th>
+                </tr>
+            </thead>
+            <tbody id="doctor-patient-list-body">
+                <!-- This section will be populated dynamically with nurse's additions -->
+            </tbody>
+        </table>
+    </div>
+    
+ 
+    <script src="/scripts/schedule.js"></script>    
 
 </body>
 </html>

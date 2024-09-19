@@ -43,53 +43,53 @@ header img {
     margin-left: 20px;
 }
 
-.task-list-section {
+.consultations-history {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.task-list-title {
+.consultations-history h2 {
+    font-size: 2em;
+    color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.task-list-title h2 {
-    display: inline-block;
-    border: 2px solid #000;
-    border-radius: 20px;
-    padding: 5px 20px;
-    font-weight: bold;
-}
-
-.task-list {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.task-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.task-list li {
+#history-container {
     display: flex;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.task-list li:last-child {
-    border-bottom: none;
+.consultation-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.task-list input[type="checkbox"] {
-    margin-right: 15px;
-    transform: scale(1.2);
+.consultation-item h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.4em;
 }
 
-.task-list label {
-    font-size: 16px;
+.consultation-item p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.consultation-item .label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
+}
+
+.consultation-item .value {
     color: #333;
 }

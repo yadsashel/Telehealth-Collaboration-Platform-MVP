@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
+} 
 header {
     display: flex;
     justify-content: flex-end;
@@ -41,4 +41,29 @@ header img {
     width: 100px;
     height: 80px;
     margin-left: 20px;
+}
+
+.consultations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.video-call-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.video-call {
+    border: 2px solid;
+    padding: 100px;
+    width: 45%;
+    text-align: center;
 }
