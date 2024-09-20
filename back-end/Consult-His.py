@@ -1,6 +1,6 @@
 import os
 import sys
-from datetime import datetime  # Correctly import datetime
+from datetime import datetime, time, timedelta
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from flask import Flask, jsonify
 from flask_cors import CORS
@@ -16,12 +16,24 @@ def serialize_row(row):
             return dt.strftime('%Y-%m-%d %H:%M:%S')
         return None
 
+    def format_time(time_obj):
+        if isinstance(time_obj, time):
+            # Convert time_obj to 12-hour format with AM/PM
+            return time_obj.strftime('%I:%M %p')
+        elif isinstance(time_obj, timedelta):
+            # Handle if time_obj is a timedelta object
+            total_seconds = int(time_obj.total_seconds())
+            hours, remainder = divmod(total_seconds, 3600)
+            minutes, _ = divmod(remainder, 60)
+            return f'{hours:02}:{minutes:02}'  # Format as HH:MM
+        return 'No time provided'
+
     return {
         'name': row[0],
         'age': row[1],
         'gender': row[2],
         'date': format_datetime(row[3]),
-        'time': format_datetime(row[4]),
+        'time': format_time(row[4]),  # Use format_time for time field
         'reason': row[5]
     }
 

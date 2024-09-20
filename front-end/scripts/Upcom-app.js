@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('appointmentForm').addEventListener('submit', async function (e) {
         e.preventDefault();
+        
 
         const appointmentData = {
             name: document.getElementById('name').value,
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             reason: document.getElementById('reason').value,
         };
 
-        console.log("Form submitted!");
+        console.log("Form submitted!"); 
         console.log("Appointment Data:", appointmentData);
 
         try {
@@ -57,4 +58,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
         consultationHistory.appendChild(appointmentCard);
     }
-});
+}); 

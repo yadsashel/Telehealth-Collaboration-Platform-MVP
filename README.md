@@ -1,3 +1,5 @@
+![My Logo](/assets/Icons/mainIcon.png)
+
 # Telehealth Collaboration Platform
 
 ### Overview
@@ -96,3 +98,5 @@ This project is licensed under the MIT License.
 For any questions or feedback, please reach out to [yazidepk@gmail.com].
 
 ---
+
+[def]: /assets/Icons/mainIcon.png

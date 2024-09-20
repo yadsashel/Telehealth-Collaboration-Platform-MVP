@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     fetchAndDisplayConsultations();
 });
 
@@ -22,10 +22,10 @@ function fetchAndDisplayConsultations() {
                     <p><span class="label">Age:</span> <span class="value">${item.age}</span></p>
                     <p><span class="label">Gender:</span> <span class="value">${item.gender}</span></p>
                     <p><span class="label">Date:</span> <span class="value">${item.date}</span></p>
-                    <p><span class="label">Time:</span> <span class="value">${item.time || 'N/A'}</span></p>
+                    <p><span class="label">Time:</span> <span class="value">${item.time || 'No time provided'}</span></p>
                     <p><span class="label">Reason:</span> <span class="value">${item.reason}</span></p>
                 `;
-                container.appendChild(div);
+                container.appendChild(div); // Append new item
             });
         })
         .catch(error => {
@@ -36,3 +36,27 @@ function fetchAndDisplayConsultations() {
             }
         });
 }
+
+function addToConsultationHistory(appointmentData) {
+    const consultationHistory = document.getElementById('history-container');
+
+    if (!consultationHistory) {
+        console.error("Consultation history container not found!");
+        return;
+    }
+
+    const appointmentCard = document.createElement('div');
+    appointmentCard.classList.add('appointment-card');
+
+    appointmentCard.innerHTML = `
+        <h3>Scheduled Appointment</h3>
+        <p><strong>Name:</strong> ${appointmentData.name}</p>
+        <p><strong>Age:</strong> ${appointmentData.age}</p>
+        <p><strong>Gender:</strong> ${appointmentData.gender}</p>
+        <p><strong>Date:</strong> ${appointmentData.date}</p>
+        <p><strong>Time:</strong> ${appointmentData.time}</p>
+        <p><strong>Reason:</strong> ${appointmentData.reason}</p>
+    `;
+
+    consultationHistory.insertBefore(appointmentCard, consultationHistory.firstChild); // Prepend new item
+} 
